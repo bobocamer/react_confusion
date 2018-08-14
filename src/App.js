@@ -4,6 +4,7 @@ import { DISHES } from './shared/dishes';
 import Menu from './components/MenuComponent';
 import logo from './logo.svg';
 import './App.css';
+import DishDetail from './components/DishdetailComponent';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
           </div>
         </Navbar>
         <Menu dishes={this.state.dishes} />
+        
       </div>
     );
   }
