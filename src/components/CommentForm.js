@@ -16,6 +16,7 @@ class CommentForm extends Component {
         };
 
         this.toggle = this.toggle.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     toggle() {
@@ -25,9 +26,8 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-      console.log('Current State is: ' + JSON.stringify(values));
-      alert('Current State is: ' + JSON.stringify(values));
-      // event.preventDefault();
+      this.toggle();
+      this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
   }
 
     render() {
